@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+                 package customer;
+service CustomerService {
+ rpc createCustomer (CustomerCreateInput) returns (Customer) {}
+rpc customers (findManyParams) returns (stream Customer) {}
+rpc customer (CustomerWhereUniqueInput) returns (Customer) {}
+rpc updateCustomer (CustomerUpdateInput) returns (Customer) {}
+rpc deleteCustomer (CustomerWhereUniqueInput) returns (Customer) {} 
+ }
+message CustomerCreateInput {
+string address = 1;
+string createdAt = 2;
+string email = 3;
+string firstName = 4;
+string id = 5;
+string lastName = 6;
+string secondName = 7;
+string updatedAt = 8;
+};
+message Customer {
+string address = 1;
+string createdAt = 2;
+string email = 3;
+string firstName = 4;
+string id = 5;
+string lastName = 6;
+string secondName = 7;
+string updatedAt = 8;
+};
+message CustomerWhereUniqueInput {
+string address = 1;
+string createdAt = 2;
+string email = 3;
+string firstName = 4;
+string id = 5;
+string lastName = 6;
+string secondName = 7;
+string updatedAt = 8;
+};
+message CustomerUpdateInput {
+string address = 1;
+string createdAt = 2;
+string email = 3;
+string firstName = 4;
+string id = 5;
+string lastName = 6;
+string secondName = 7;
+string updatedAt = 8;
+};
+message findManyParams {
+
+};
